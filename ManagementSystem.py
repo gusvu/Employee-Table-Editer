@@ -52,7 +52,6 @@ def remove_employee():
         print(f"Error: {err}")
         con.rollback()
 
-# promote an employee
 def promote_employee():
     Id = input("Enter Employee's Id: ")
     if not check_employee(Id):
@@ -76,7 +75,6 @@ def promote_employee():
         print(f"Error: {e}")
         con.rollback()
 
-# Function to display all employees
 def display_employees():
     try:
         sql = 'SELECT * FROM employees'
@@ -92,7 +90,6 @@ def display_employees():
     except mysql.connector.Error as err:
         print(f"Error: {err}")
 
-# Function to display the menu
 def menu():
     while True:
         print("\nWelcome to Employee Management Record")
